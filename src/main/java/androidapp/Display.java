@@ -1,6 +1,5 @@
 package androidapp;
 
-import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -29,7 +28,7 @@ public class Display extends setUp {
 
         // Go back to main  app categories screen
         driver.findElement(By.id("android:id/button1")).click();
-        driver.sendKeyEvent(AndroidKeyCode.BACK);
+        driver.pressKey(keyEvent);
     }
 
     @Test
@@ -50,7 +49,7 @@ public class Display extends setUp {
 
         // Go back to main  app categories screen
         driver.findElement(By.id("android:id/button1")).click();
-        driver.sendKeyEvent(AndroidKeyCode.BACK);
+        driver.pressKey(keyEvent);
     }
 
     @Test
@@ -71,7 +70,7 @@ public class Display extends setUp {
 
         // Go back to main  app categories screen
         driver.findElement(By.id("android:id/button1")).click();
-        driver.sendKeyEvent(AndroidKeyCode.BACK);
+        driver.pressKey(keyEvent);
     }
 
     @AfterTest

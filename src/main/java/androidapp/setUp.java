@@ -5,6 +5,8 @@ package androidapp;
  */
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +15,7 @@ import org.testng.asserts.SoftAssert;
 
 public class setUp {
     AndroidDriver driver;
+    public static KeyEvent keyEvent = new KeyEvent(AndroidKey.BACK);
 
     // Create object/instance of Soft assert
     public SoftAssert s_assert = new SoftAssert();
@@ -24,7 +27,7 @@ public class setUp {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("no-reset", "true");
         caps.setCapability("full-reset", "False");
-        caps.setCapability("deviceName", "G Flex");
+        caps.setCapability("deviceName", "localhost:5555");
         caps.setCapability("udid", "06cddb839b162851");
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "4.4.2");
